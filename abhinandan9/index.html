@@ -5,49 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style media="screen">
-#theButton {
-  position: relative;
-  margin: 0;
-  padding: 5px 12px;
-  height: 60px;
-  width: 150px;
-  outline: none;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  background-color: cyan;
-  border: 1px solid rgba(22, 76, 167, 0.6);
-  border-radius: 100px;
-  color: #1d89ff;
-  font-weight: 400;
-  font-size: 20px;
-  font-family: inherit;
-  z-index: 0;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-  span {
-    color: 'red';
-    font-size: 8px;
-    font-weight: 500;
-    letter-spacing: 0.7px;
-  }
-  &:hover {
-    animation: rotate 0.7s ease-in-out both;
-    span {
-      animation: storm 0.7s ease-in-out both;
-      animation-delay: 0.06s;
-    }
-  }
-}
-
-
-
-</style>
 <body id="myPage">
 
 <!-- Sidebar on click >
@@ -65,30 +24,29 @@
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Abhinandan</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Testimonials</a>
-  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Price</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars w3-xlarge"></i></a>
+  <a href="#" style="width:15%;padding:0" class="logo w3-bar-item w3-button"><img src="img/logo.jpg" style="width:100%"></img></a>
+  <a href="#aboutus" class="cust-nav w3-button w3-bar-item w3-hide-small">About Us</a>
+  <a href="#customers" class="cust-nav w3-bar-item w3-button w3-hide-small">Customers</a>
+  <a href="#contact" class="cust-nav w3-bar-item w3-button w3-hide-small">Contact</a>
   <!--a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a-->
  </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">Team</a>
-    <a href="#work" class="w3-bar-item w3-button">Work</a>
-    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button">Search</a>
-  </div>
+  <a href="#aboutus" class="w3-bar-item w3-button">About Us</a>
+  <a href="#customers" class="w3-bar-item w3-button">Customers</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>	
 </div>
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
   <img src="img/header-banner.jfif" alt="Oops!" style="width:100%;min-height:350px;max-height:650px;max-width:100%">
-  <div style="position:fixed; outline-style: none; " class="w3-container w3-display-bottomright w3-margin-bottom">
-    <button onclick=""	style="" class="w3-button" title="Whatsapp">  <a href="https://api.whatsapp.com/send/?phone=919428307279&text&app_absent=0"> <img src="img/whatsapp.png" alt="" width="70" height="70"> </a> </button>
+  <div style="position:fixed;outline-style:none;bottom:15px;margin-right:20px" class="w3-container w3-display-bottomright w3-margin-bottom">
+    <a href="#" title="Whatsapp">
+	<img src="img/whatsapp.png" alt="" width="60" height="60"/>
+	</a>
   </div>
 </div>
 
@@ -135,72 +93,60 @@
 </div>
 </div-->
 
-<div class="w3-container w3-padding-64 w3-center" id="team" style = "background: url(img/water.jpg);" >
-<b>
-<h3>We provide you, The *Betting* ID of <h2> LotusBook247. </h2>(One of the most trustable sources)</h3>
-</div>
-</div>
-
-</b>
-
-<div class="w3-row-padding w3-center w3-padding-64" id="pricing" style = "background-color: gray;">
-    <p style = "color: white;">
-    <h2>Get Demo Id NOW! </h2>
-    <p align='center'> <button id='theButton' >Demo Id </button> </p>
-    <p id="theDiv"></p>
-    <h3>Login with the above details on this link.</h3>
-    <a href="https://lotusbook247.io/d/index.html#/" target="_blank"><h3>LotusBook247</h3></a>
-
-
-
-
-
-      <!-- <h3> <li> <b>Demo Id : </b> 007test </li>
-      <li> <b>Password: </b> Abc123 </li> </h3> -->
-
-    </p>
-
-    <br>
+<div class="w3-container w3-padding-48 w3-center" style="background-color: #F0F0F0;" id="aboutus">
+<p style="font-size:20px">
+We provide you, the Betting ID of
+<br>
+<br>
+<span style="font-size:24px"><b>LotusBook247</b></span>
+<br>
+<span style="font-size:15px">(One of the most trustable sources)</span>
+<br>
+<br>
+For Demo, You can visit the below link
+<br>
+<br>
+<span style="font-size:24px"><a href="https://lotusbook247.com/" target="_blank"><b>LotusBook247.com</b></a></span>
+<br>
+<span style="font-size:15px"><b>Demo Id : </b>007test
+<br>
+<b>Password : </b>Abc123
+</span>
+</p>
 </div>
 
 <!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+<div class="w3-row-padding w3-padding-32 w3-theme-l1" id="customers">
 
-<div class="w3-quarter">
-<h2>Our Customers</h2>
+<div class="w3-row-padding">
+<h2 class="w3-padding-32" align="center">Our Customers</h2>
 </div>
 
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="img/2000.jpg"  style="width:100%">
-  <div class="w3-container">
-  <h3 align = "center">Mickey</h3>
-  <p align = "center" style="font-size:18px;">Very Happy Playing with you, Hope I Earn more Next time. &#128540;</p>
-  </div>
+<div class="w3-third">
+<div class="cust-card w3-card w3-white">
+  <img src="img/paytm1.jpg"  style="width:100%;">
   </div>
 </div>
 
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="img/4687.jpg"  style="width:100%">
-  <div class="w3-container">
-    <h3 align = "center">Mitesh</h3>
-    <p align = "center" style="font-size:18px;">Trustworthy and Exciting Games. <br> .</p>
+<div class="w3-third">
+<div class="cust-card w3-card w3-white">
+  <img src="img/paytm2.jpg"  style="width:100%;">
   </div>
+</div>
+
+<div class="w3-third">
+<div class="cust-card w3-card w3-white">
+  <img src="img/paytm3.jpg"  style="width:100%;">
   </div>
 </div>
 
 
 
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="img/18700.png"  style="width:100%">
-  <div class="w3-container">
-    <h3 align = "center">Suresh</h3>
-    <p align = "center" style="font-size:18px;">Easy to Understand, and based purely on probability.</p>
+<!--div class="w3-quarter">
+<div class="cust-card w3-card w3-white">
+  <img src="img/paytm5.jpg"  style="width:100%;">
   </div>
-  </div>
-</div>
+</div-->
 
 </div>
 
@@ -210,15 +156,9 @@
 
 
 <!-- Contact Container -->
-<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+<!--div class="w3-container w3-padding-32 w3-theme-l5 w3-center" id="contact">
   <div class="w3-row">
-    <div class="w3-col m5">
-    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
 
-
-      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>+91 8433897208</p>
-      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>virajshah@gmail.com</p>
-    </div>
     <div class="w3-col m7">
       <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
       <div class="w3-section">
@@ -239,38 +179,41 @@
       </form>
     </div>
   </div>
-</div>
+</div-->
 
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+<!-- Image of location/map >
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;"-->
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>Follow Us</h4>
+<footer class="w3-container w3-padding-32 w3-theme-d1" id="contact">
+<div class="w3-row">
+<div class="w3-half">
+  <div style="padding-top:16px"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+  <p><i class="fa fa-phone w3-text-teal w3-xlarge" style="margin-right:10px;"></i>+91 8433897208</p>
+  <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge" style="margin-right:10px"></i>virajshah@gmail.com</p>
+</div>
+<div class="w3-half">  
+  <div class="w3-right">
+   <div class="w3-padding-16 w3-right"><span class="w3-xlarge w3-border-teal w3-bottombar">Follow Us</span></div>
+  <div class="w3-row">
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
   <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p></p>
-
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
-    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+  </div>
+  </div>
+</div>
+</div>
+  <div style="position:relative;bottom:0;z-index:1;" class="w3-left">
+    <a class="w3-button w3-theme" href="#" target="_top" title="Back to Top"><span class="w3-xxlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
+  
 </footer>
 
+
 <script>
-
-const btn = document.getElementById('theButton');
-const myText = document.getElementById('theDiv');
-
-btn.addEventListener('click', function(){
-  const myInsertText = 'Demo Id : 007test Password: Abc123';
-myText.innerHTML = myInsertText;
-
-});
 // Script for side navigation
 function w3_open() {
   var x = document.getElementById("mySidebar");
@@ -279,21 +222,17 @@ function w3_open() {
   x.style.display = "block";
 }
 
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
 // Used to toggle the menu on smaller screens when clicking on the menu button
 function openNav() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
-  } else {
+  } else { 
     x.className = x.className.replace(" w3-show", "");
   }
 }
 </script>
+
 
 </body>
 </html>
